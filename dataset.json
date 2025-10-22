@@ -1,0 +1,42 @@
+[
+  {
+    "origin": "LHE",
+    "destination": "JED",
+    "airline": "Saudia",
+    "departureDate": "2026-02-15T08:00:00.000Z",
+    "trackingStartDate": "2025-08-15T00:00:00.000Z",
+    "trackingIntervalMinutes": 1440,
+    "status": "ACTIVE",
+    "description": "Umrah trip for family in February"
+  },
+  {
+    "origin": "SIN",
+    "destination": "BKK",
+    "airline": "Thai Airways",
+    "departureDate": "2026-01-10T12:00:00.000Z",
+    "trackingStartDate": "2025-10-10T00:00:00.000Z",
+    "trackingIntervalMinutes": 1440,
+    "status": "ACTIVE",
+    "description": "Quick weekend getaway to Bangkok"
+  },
+  {
+    "origin": "DXB",
+    "destination": "MLE",
+    "airline": "Emirates",
+    "departureDate": "2026-05-20T09:15:00.000Z",
+    "trackingStartDate": "2025-11-20T00:00:00.000Z",
+    "trackingIntervalMinutes": 1440,
+    "status": "ACTIVE",
+    "description": "Honeymoon trip to Maldives in May"
+  },
+  {
+    "origin": "LHE",
+    "destination": "DXB",
+    "airline": "Emirates",
+    "departureDate": "2026-01-01T03:00:00.000Z",
+    "trackingStartDate": "2025-07-01T00:00:00.000Z",
+    "trackingIntervalMinutes": 1440,
+    "status": "ACTIVE",
+    "description": "New Years trip to Dubai"
+  }
+]
