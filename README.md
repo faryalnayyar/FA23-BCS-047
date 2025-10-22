@@ -217,6 +217,7 @@ Body (JSON):
 
 
 Get Price History
+
 Method: GET
 URL: /api/v1/track/<job_id>/history
 
@@ -227,6 +228,7 @@ Method: GET
 URL: /api/v1/search
 
 Query Parameters:
+
 q (text search on description)
 origin (filter by origin)
 airline (filter by airline)
