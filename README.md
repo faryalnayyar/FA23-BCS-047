@@ -162,6 +162,7 @@ lastCheckedTimestamp (ISODate): The last time the scheduler checked this flight'
 
 2. price_history Collection
 This collection stores the results from the scheduler. Every time the scheduler checks a price, it adds one document with the following attributes:
+
 _id (ObjectId): Unique identifier for this specific price log. (Index: Default)
 
 trackedFlightId (ObjectId): Links this price log to the _id in the tracked_flights collection. (Index: Yes)
