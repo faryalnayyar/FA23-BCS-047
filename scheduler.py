@@ -3,7 +3,6 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import datetime, timedelta
 from models import get_tracked_flights_collection, get_price_history_collection
 
-# Get collections once when the script starts
 try:
     tracked_flights_collection = get_tracked_flights_collection()
     price_history_collection = get_price_history_collection()
@@ -13,13 +12,11 @@ except Exception as e:
 
 
 def fetch_and_log_price(flight_job):
-    """MIMICS fetching a price and logging it to the database."""
     try:
         print(f"Checking price for: {flight_job['origin']}->{flight_job['destination']} (ID: {flight_job['_id']})")
 
         # 1. MIMIC EXTERNAL API CALL
         mock_price = round(random.uniform(500, 800), 2)
-
         # 2. Log the new price
         price_log = {
             "trackedFlightId": flight_job['_id'],
@@ -42,7 +39,7 @@ def fetch_and_log_price(flight_job):
 
 
 def run_scheduler_jobs():
-    """Finds all jobs that are due to be run."""
+  
     print(f"\nScheduler running at {datetime.utcnow()}...")
     now = datetime.utcnow()
 
@@ -75,13 +72,12 @@ def run_scheduler_jobs():
         fetch_and_log_price(job)
 
 
-# --- Start the Scheduler ---
 if __name__ == "__main__":
     scheduler = BlockingScheduler()
     scheduler.add_job(run_scheduler_jobs, 'interval', seconds=30)
 
     print("Scheduler started. Press Ctrl+C to exit.")
-    run_scheduler_jobs()  # Run once immediately on start
+    run_scheduler_jobs()  
 
     try:
         scheduler.start()
