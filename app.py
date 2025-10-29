@@ -5,7 +5,6 @@ from models import get_tracked_flights_collection, get_price_history_collection
 
 app = Flask(__name__)
 
-# --- Helper Function ---
 def serialize_doc(doc):
     """Converts a MongoDB doc to a JSON-serializable format."""
     if '_id' in doc:
@@ -17,14 +16,14 @@ def serialize_doc(doc):
             doc[key] = value.isoformat()
     return doc
 
-# --- API Endpoints ---
+# API Endpoints 
 @app.route("/")
 def home():
     return "Flight Tracker API is running!"
 
 @app.route("/api/v1/track", methods=['POST'])
 def create_track_request():
-    """Creates a new flight tracking job."""
+  
     try:
         data = request.json
         tracked_flights_collection = get_tracked_flights_collection()
@@ -41,7 +40,7 @@ def create_track_request():
 
 @app.route("/api/v1/track/<string:job_id>/history", methods=['GET'])
 def get_price_history(job_id):
-    """Gets the price history for a specific tracking job."""
+
     try:
         price_history_collection = get_price_history_collection()
         history_docs = price_history_collection.find({
