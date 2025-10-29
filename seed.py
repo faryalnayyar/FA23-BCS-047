@@ -21,7 +21,7 @@ def seed_database():
             item['departureDate'] = datetime.fromisoformat(item['departureDate'].replace('Z', '+00:00'))
             item['trackingStartDate'] = datetime.fromisoformat(item['trackingStartDate'].replace('Z', '+00:00'))
             if 'lastCheckedTimestamp' in item:
-                 # Ensure this field is also a date if it exists
+                 
                  item['lastCheckedTimestamp'] = datetime.fromisoformat(item['lastCheckedTimestamp'].replace('Z', '+00:00'))
 
 
